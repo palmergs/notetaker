@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :due_by %>
-    <%= form.date_select :due_by %>
+    <%= form.text_field :due_by, data: { behavior: 'flatpickr' } %>
   </div>
 
   <div class="actions">

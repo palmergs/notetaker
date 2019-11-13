@@ -7,6 +7,17 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("stylesheets/application.scss")
+
+import flatpickr from "flatpickr"
+require("flatpickr/dist/flatpickr.css")
+document.addEventListener("turbolinks:load", () => {
+  flatpickr("[data-behavior='flatpickr']", {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d",
+  })
+})
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
