@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item_definition.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item_definition.description %>
+</p>
+
+<p>
+  <strong>Data type:</strong>
+  <%= @item_definition.data_type %>
+</p>
+
+<p>
+  <strong>Data parent:</strong>
+  <%= @item_definition.data_parent %>
+</p>
+
+<%= link_to 'Edit', edit_item_definition_path(@item_definition) %> |
+<%= link_to 'Back', item_definitions_path %>

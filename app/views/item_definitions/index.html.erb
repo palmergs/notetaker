@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Item Definitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Data type</th>
+      <th>Data parent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @item_definitions.each do |item_definition| %>
+      <tr>
+        <td><%= item_definition.name %></td>
+        <td><%= item_definition.description %></td>
+        <td><%= item_definition.data_type %></td>
+        <td><%= item_definition.data_parent %></td>
+        <td><%= link_to 'Show', item_definition %></td>
+        <td><%= link_to 'Edit', edit_item_definition_path(item_definition) %></td>
+        <td><%= link_to 'Destroy', item_definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item Definition', new_item_definition_path %>

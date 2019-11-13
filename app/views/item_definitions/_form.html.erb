@@ -1,0 +1,37 @@
+<%= form_with(model: item_definition, local: true) do |form| %>
+  <% if item_definition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item_definition.errors.count, "error") %> prohibited this item_definition from being saved:</h2>
+
+      <ul>
+        <% item_definition.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_type %>
+    <%= form.text_field :data_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_parent %>
+    <%= form.text_field :data_parent %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
