@@ -4,7 +4,11 @@ class ItemDefinitionsController < ApplicationController
   # GET /item_definitions
   # GET /item_definitions.json
   def index
-    @item_definitions = ItemDefinition.all
+    if params[:query]
+      @item_definitions = ItemDefinition.connection.execute("SELECT * FROM item_definitions where name like '#{ params[:query] }'")
+    else
+      @item_definitions = ItemDefinition.all
+    end
   end
 
   # GET /item_definitions/1
