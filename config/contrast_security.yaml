@@ -10,3 +10,5 @@ agent:
       level: ERROR
     host: 127.0.0.1
     port: 30555
+application:
+  name: notetaker-on-heroku
