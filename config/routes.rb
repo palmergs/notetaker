@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   resources :todos
   resources :item_definitions
 
-  get 'home/welcome'
-  get 'home/about'
+  get 'welcome', to: 'home#welcome'
+  get 'about', to: 'home#about'
 
   root to: 'home#welcome'
 end
