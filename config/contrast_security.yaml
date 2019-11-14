@@ -12,3 +12,5 @@ agent:
     port: 30555
 application:
   name: notetaker-on-heroku
+server: 
+  name: gsp-heroku
