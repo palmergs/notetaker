@@ -61,8 +61,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.0)
     bindex (0.8.1)
-    bootsnap (1.4.5)
-      msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.29.0)
@@ -106,7 +104,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.13.0)
-    msgpack (1.3.1)
     nio4r (2.5.2)
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
@@ -210,7 +207,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
   contrast-agent
